@@ -1,38 +1,146 @@
 .App {
-  text-align: center;
+  background-color: #1f222c;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slick-arrow {
+  display: none !important;
 }
+.button {
+  cursor: pointer;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  padding-right: 1%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonflex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1%;
+}
+
+.h2 {
+  color: blanchedalmond;
+}
+/* @media (min-width: 300px) { */
+.card-columns {
+  column-count: 10 !important;
+}
+.card-title {
+  display: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+.card :hover {
+  opacity: 50%;
+}
+.card :hover + .card-title {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  /* font-size: xx-large !important; */
+  position: absolute;
+  color: blanchedalmond;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center !important;
+}
+.card {
+  background-color: black !important;
+  border: none !important;
+  width: 90% !important;
+  /* border-radius: 10px !important; */
+}
+.card-img {
+  /* border-radius: 10px !important; */
+}
+/* } */
+.jumbotron {
+  background-image: url("https://www.techgenyz.com/wp-content/uploads/2020/07/disney-raya-the-last-dragon.jpg");
+  background-size: cover;
+  height: 30vh;
+  color: blanchedalmond;
+  padding-top: 15rem !important;
+  z-index: 0;
+  /* position: absolute; */
+}
+/* } */
+
+.page {
+}
+.pagination > li > a {
+  background-color: rgba(155, 149, 149, 0);
+  color: whitesmoke;
+  border: none;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  /* color: #5a5a5a;
+  background-color: #eee;
+  border-color: #ddd; */
+}
+
+.pagination > .active > a {
   color: white;
+  background-color: #5a4181 !important;
+  border: solid 1px #5a4181 !important;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination > .active > a:hover {
+  background-color: #5a4181 !important;
+  border: solid 1px #5a4181;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav {
+  color: blanchedalmond !important;
+  color: inherit !important;
+  /* position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%); */
+}
+
+.More {
+  padding-top: 10vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  /* transform: translate(-50%); */
+}
+
+#widget2 {
+  height: 80vh;
+  width: 100vw;
+}
+.DescTitle {
+  color: blanchedalmond;
+  font-size: small;
+}
+.Description {
+  display: flex;
+}
+
+.popularsl {
+  color: blanchedalmond;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  .card-columns {
+    column-count: 2 !important;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.watchmore {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.nav-link {
+  color: blanchedalmond !important;
 }
