@@ -19,7 +19,7 @@ function App() {
     <div>
       <div className="App">
         <Navigasi />
-        <Router>
+        <Router basename="/Timflix/">
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/Popular" exact component={Popular} />
