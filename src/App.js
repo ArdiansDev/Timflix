@@ -4,6 +4,7 @@ import React, {
   BrowserRouter as Router,
   Switch,
   Route,
+  HashRouter,
 } from "react-router-dom";
 import TopRated from "./pages/TopRated";
 import Popular from "./pages/Popular";
@@ -19,7 +20,7 @@ function App() {
     <div>
       <div className="App">
         <Navigasi />
-        <Router basename="/Timflix/">
+        <HashRouter basename="/">
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/Popular" exact component={Popular} />
@@ -29,7 +30,7 @@ function App() {
             <Route path="/Detail" exact component={Detail} />
             <Route path="/Detail/:menu/:id" exact component={Detail} />
           </Switch>
-        </Router>
+        </HashRouter>
       </div>
     </div>
   );
