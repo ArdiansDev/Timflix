@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Timflix/static/css/main.614a149c.chunk.css",
+    "main.js": "/Timflix/static/js/main.fcc6e71d.chunk.js",
+    "main.js.map": "/Timflix/static/js/main.fcc6e71d.chunk.js.map",
+    "runtime-main.js": "/Timflix/static/js/runtime-main.223a2946.js",
+    "runtime-main.js.map": "/Timflix/static/js/runtime-main.223a2946.js.map",
+    "static/css/2.c4b32b1f.chunk.css": "/Timflix/static/css/2.c4b32b1f.chunk.css",
+    "static/js/2.b627bbd9.chunk.js": "/Timflix/static/js/2.b627bbd9.chunk.js",
+    "static/js/2.b627bbd9.chunk.js.map": "/Timflix/static/js/2.b627bbd9.chunk.js.map",
+    "static/js/3.5332c24e.chunk.js": "/Timflix/static/js/3.5332c24e.chunk.js",
+    "static/js/3.5332c24e.chunk.js.map": "/Timflix/static/js/3.5332c24e.chunk.js.map",
+    "index.html": "/Timflix/index.html",
+    "static/css/2.c4b32b1f.chunk.css.map": "/Timflix/static/css/2.c4b32b1f.chunk.css.map",
+    "static/css/main.614a149c.chunk.css.map": "/Timflix/static/css/main.614a149c.chunk.css.map",
+    "static/js/2.b627bbd9.chunk.js.LICENSE.txt": "/Timflix/static/js/2.b627bbd9.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/Timflix/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.223a2946.js",
+    "static/css/2.c4b32b1f.chunk.css",
+    "static/js/2.b627bbd9.chunk.js",
+    "static/css/main.614a149c.chunk.css",
+    "static/js/main.fcc6e71d.chunk.js"
+  ]
+}
