@@ -4,11 +4,8 @@ import React, {
   BrowserRouter as Router,
   Switch,
   Route,
-  HashRouter,
 } from "react-router-dom";
-import TopRated from "./pages/TopRated";
-import Popular from "./pages/Popular";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Movie from "./pages/Movie";
 import TV from "./pages/TV";
 import Navigasi from "./component/Navbar";
@@ -20,17 +17,16 @@ function App() {
     <div>
       <div className="App">
         <Navigasi />
-        <HashRouter basename="/">
+        <Router>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/Popular" exact component={Popular} />
-            <Route path="/TopRated" exact component={TopRated} />
+            <Route path="/" exact component={Movie} />
+
             <Route path="/Movie" exact component={Movie} />
             <Route path="/TV" exact component={TV} />
             <Route path="/Detail" exact component={Detail} />
             <Route path="/Detail/:menu/:id" exact component={Detail} />
           </Switch>
-        </HashRouter>
+        </Router>
       </div>
     </div>
   );

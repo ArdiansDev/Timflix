@@ -1,5 +1,10 @@
 .App {
   background-color: #1f222c;
+  font-size: 21px;
+}
+.h1 {
+  color: whitesmoke;
+  text-align: center;
 }
 .slick-arrow {
   display: none !important;
@@ -15,12 +20,17 @@
   padding-right: 1%;
 }
 
+.Title {
+  font-size: 20px;
+}
+
 .h2 {
+  font-size: 20px;
   color: blanchedalmond;
 }
 /* @media (min-width: 300px) { */
 .card-columns {
-  column-count: 10 !important;
+  column-count: 5 !important;
 }
 .card-title {
   display: none;
@@ -29,6 +39,7 @@
 }
 .card :hover {
   opacity: 50%;
+  cursor: pointer;
 }
 .card :hover + .card-title {
   overflow: hidden;
@@ -116,10 +127,13 @@
   height: 80vh;
   width: 100vw;
 }
-.DescTitle {
+.Title {
   color: blanchedalmond;
-  font-size: small;
 }
+.Title h4 {
+  font-size: 14px;
+}
+
 .Description {
   display: flex;
 }
@@ -127,6 +141,23 @@
 .popularsl {
   color: blanchedalmond;
   position: absolute;
+}
+
+.detail {
+  color: blanchedalmond;
+}
+
+.detail h3 {
+  color: whitesmoke;
+  font-size: 32px;
+}
+.detail h4 {
+  color: blanchedalmond;
+  font-size: 14px;
+}
+
+.detail img {
+  height: ;
 }
 
 @media (max-width: 500px) {

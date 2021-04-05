@@ -42,13 +42,13 @@ function Popular(props) {
                     })
                   }
                   variant="top"
-                  src={
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/" +
-                    item.poster_path
-                  }
+                  src={"https://image.tmdb.org/t/p/w500//" + item.poster_path}
                   menu={menu}
                 />
-                <Card.Title>{item.title}</Card.Title>
+                <Card.Title>
+                  {item.title}
+                  {item.name}
+                </Card.Title>
               </Card>
             );
           })}

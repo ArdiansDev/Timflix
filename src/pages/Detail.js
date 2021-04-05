@@ -1,16 +1,18 @@
 import React from "react";
-
+import Popularslider from "./../component/Popularslider";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import YouTube from "./../component/Youtube";
 import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Credits from "../component/Credit";
+
 function Detail(props) {
   const [Film, setFilm] = useState([]);
   const Movieid = props.match.params.id;
   const menu = props.match.params.menu;
-  console.log(props);
+  // console.log(props);
   //   const history = useHistory();
 
   useEffect(() => {
@@ -30,8 +32,8 @@ function Detail(props) {
         <h2 className="h2">{Film.title}</h2>
         <YouTube menu={menu} me={Movieid} onReady />
       </div>
-      <Container className="Description">
-        <Row>
+      <Container className="">
+        <Row className="detail">
           <img
             alt=""
             src={
@@ -39,11 +41,17 @@ function Detail(props) {
               Film.poster_path
             }
           />
-          <Col md={6}>
-            <h3 className="h2">{Film.title}</h3>
-            <h3 className="DescTitle">{Film.overview}</h3>
+
+          {/* <Col className="Title"></Col> */}
+          <Col lg={8}>
+            <h3>{Film.name}</h3>
+            <h3>{Film.title}</h3>
+            <h4>{Film.overview}</h4>
+            <Credits {...props} />
           </Col>
         </Row>
+        <br />
+        <Popularslider />
       </Container>
     </div>
   );

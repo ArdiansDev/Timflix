@@ -8,11 +8,15 @@ import {
   faChevronCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { withRouter } from "react-router-dom";
-class Popularslider extends Component {
+
+class Credits extends Component {
   state = {
     post: [],
+    menu: "",
+    Movieid: "",
     // show: false,
   };
+
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -22,17 +26,19 @@ class Popularslider extends Component {
     const { history } = this.props;
     if (history) history.push("/Popular");
   };
-
-  componentDidMount() {
+  componentDidMount(props) {
+    // console.log(this.props);
+    const menu = this.props.match.params.menu;
+    const Movieid = this.props.match.params.id;
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=b4136201ac9df556a64e14039a475721&language=en-US"
+        `https://api.themoviedb.org/3/${menu}/${Movieid}/credits?api_key=b4136201ac9df556a64e14039a475721&language=en-US`
       )
       .then((result) => {
         this.setState({
-          post: result.data.results,
+          post: result.data.cast,
         });
-        // console.log(result.data.results[0].);
+        // console.log(result.data.cast);
       });
   }
   next() {
@@ -43,11 +49,11 @@ class Popularslider extends Component {
   }
   render() {
     const settings = {
-      className: "center",
-      centerMode: true,
+      // className: "center",
+      centerMode: false,
       infinite: true,
       centerPadding: "0px",
-      slidesToShow: 8,
+      slidesToShow: 4,
       speed: 500,
       slidesToScroll: 1,
     };
@@ -55,7 +61,7 @@ class Popularslider extends Component {
     return (
       <div>
         <div className="">
-          <h2 className="popularsl">Popular</h2>
+          <h2 className="popularsl">Cast</h2>
           <div className="buttonflex">
             <FontAwesomeIcon
               className="button"
@@ -82,13 +88,10 @@ class Popularslider extends Component {
                   alt=""
                   src={
                     "https://www.themoviedb.org/t/p/w220_and_h330_face/" +
-                    post.poster_path
-                  }
-                  onClick={() =>
-                    this.props.history.push(`/Detail/movie/${post.id}`)
+                    post.profile_path
                   }
                 />
-                <Card.Title>{post.title}</Card.Title>
+                <Card.Title>{post.name}</Card.Title>
               </Card>
             </div>
           ))}
@@ -100,4 +103,4 @@ class Popularslider extends Component {
     );
   }
 }
-export default withRouter(Popularslider);
+export default Credits;
